@@ -20,6 +20,9 @@ public class VaccinationCenter {
     private String address;
     private String city;
 
+    public VaccinationCenter() {
+    }
+
     public VaccinationCenter(String name, String city, String address) {
         this.name = name;
         this.city = city;

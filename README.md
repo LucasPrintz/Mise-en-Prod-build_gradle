@@ -2,31 +2,31 @@
 
 ## Installation
 
-''' bash
+``` bash
 git clone https://github.com/LucasPrintz/Mise-en-Prod-build_gradle.git
 cd Mise-en-Prod-build_gradle
-'''
+```
 
 ## Build en local
 
-''' bash
+``` bash
 cd covid-api
 ./gradlew build
-'''
+```
 
 Cette commande génére le fichier covid-api-0.0.1-SNAPSHOT.jar dans le dossier build/libs, qui peut être lancé par la commande :
 
-''' bash
+``` bash
 java -jar covid-api-0.0.1-SNAPSHOT.jar
-'''
+```
 
 ## Build avec docker
 
 Depuis le dossier Mise-en-Prod-build_gradle, lancer la commande :
 
-''' bash
+``` bash
 docker compose up -d
-'''
+```
 
 ## Lancer les builds depuis Jenkins
 

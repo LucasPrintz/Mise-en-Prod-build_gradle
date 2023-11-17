@@ -13,7 +13,7 @@ services:
       timeout: 3s
       retries: 5
   covid-api:
-    image: lucaspri/mise-en-prod-build_gradle:19
+    image: lucaspri/mise-en-prod-build_gradle:latest
     depends_on:
       db:
         condition: service_healthy

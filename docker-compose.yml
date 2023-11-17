@@ -13,8 +13,7 @@ services:
       timeout: 3s
       retries: 5
   covid-api:
-    build:
-      dockerfile: Dockerfile
+    image: lucaspri/mise-en-prod-build_gradle:19
     depends_on:
       db:
         condition: service_healthy

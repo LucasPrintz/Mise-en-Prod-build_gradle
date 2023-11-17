@@ -8,14 +8,14 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: covid-db
     volumes:
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data:rw
     healthcheck:
       test: pg_isready -U postgres -d covid-db
       interval: 1s
       timeout: 3s
       retries: 5
   covid-api:
-    image: lucaspri/mise-en-prod-build_gradle:latest
+    build: .
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/covid-db
     depends_on:

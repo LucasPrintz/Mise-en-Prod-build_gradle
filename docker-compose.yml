@@ -15,7 +15,7 @@ services:
       timeout: 3s
       retries: 5
   covid-api:
-    build: .
+    image: lucaspri/mise-en-prod-build_gradle:latest
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/covid-db
     depends_on:
